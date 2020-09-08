@@ -49,7 +49,7 @@ public class AccesoADatos extends Service {
                             Date date= new Date(dataLong);
                             String contenido= c.getString(c.getColumnIndex(Telephony.Sms.Inbox.BODY));
                             Log.d("Salida ", "Numero " + nro + "Recibido al: " + date.toString()+ "--" + contenido);
-
+                            i++;
 
                         }
 
@@ -69,8 +69,6 @@ public class AccesoADatos extends Service {
         Thread trabajador= new Thread(Leer);
         trabajador.start();
         return  START_STICKY;
-
-
 
 
     }

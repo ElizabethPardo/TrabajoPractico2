@@ -33,7 +33,6 @@ private Intent intent;
     @Override
     protected void onStop() {
         super.onStop();
-
         stopService(intent);
     }
 }
